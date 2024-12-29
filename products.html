@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - AL MAGHREB L&G</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: orange;
+    line-height: 1.6;
+}
+
+/* Navigation - matching main page */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid orange;
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: orange;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: orange;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.nav-link:hover {
+    background-color: orange;
+    color: black;
+}
+
+/* Products Header */
+.products-header {
+    padding-top: 100px;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.products-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Category Filters */
+.category-filters {
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.5rem 1.5rem;
+    background-color: transparent;
+    border: 2px solid orange;
+    color: orange;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background-color: orange;
+    color: black;
+}
+
+/* Products Grid */
+.products-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background-color: rgba(255, 165, 0, 0.1);
+    border: 2px solid orange;
+    border-radius: 8px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    animation: fadeIn 1s ease-out;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 165, 0, 0.3);
+}
+
+.product-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: orange;
+}
+
+.product-description {
+    margin-bottom: 1.5rem;
+}
+
+.product-features {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.product-features li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.product-features i {
+    color: orange;
+}
+
+.inquire-btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: orange;
+    color: black;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.inquire-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 165, 0, 0.3);
+}
+
+/* Footer */
+.footer {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 2rem;
+    border-top: 2px solid orange;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .products-header h1 {
+        font-size: 2rem;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+    
+    .category-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="brand">AL MAGHREB L&G</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="products-header">
+        <h1>Our Products</h1>
+    </header>
+
+    <div class="category-filters">
+        <button class="filter-btn active" data-category="all">All Products</button>
+        <button class="filter-btn" data-category="engine">Engine Oils</button>
+        <button class="filter-btn" data-category="industrial">Industrial Greases</button>
+        <button class="filter-btn" data-category="compressor">Compressor Oils</button>
+        <button class="filter-btn" data-category="hydraulic">Hydraulic Oils</button>
+        <button class="filter-btn" data-category="food-grade">Food-Grade</button>
+    </div>
+
+    <div class="products-grid">
+        <div class="product-card" data-category="engine">
+            <h3 class="product-title">High-Performance Engine Oils</h3>
+            <p class="product-description">Top-quality oils designed for high-performance engines.</p>
+            <ul class="product-features">
+                <li><i class="fas fa-check"></i> Superior engine protection</li>
+                <li><i class="fas fa-check"></i> Enhanced fuel efficiency</li>
+                <li><i class="fas fa-check"></i> Extended oil life</li>
+            </ul>
+            <a href="contact.html" class="inquire-btn">Inquire Now</a>
+        </div>
+
+        <div class="product-card" data-category="industrial">
+            <h3 class="product-title">Industrial Greases</h3>
+            <p class="product-description">Durable and reliable greases for various industrial applications.</p>
+            <ul class="product-features">
+                <li><i class="fas fa-check"></i> High temperature stability</li>
+                <li><i class="fas fa-check"></i> Extended equipment life</li>
+                <li><i class="fas fa-check"></i> Excellent wear protection</li>
+            </ul>
+            <a href="contact.html" class="inquire-btn">Inquire Now</a>
+        </div>
+
+        <div class="product-card" data-category="compressor">
+            <h3 class="product-title">Compressor Oils</h3>
+            <p class="product-description">Specially formulated oils for maintaining compressor efficiency.</p>
+            <ul class="product-features">
+                <li><i class="fas fa-check"></i> Optimal oxidation resistance</li>
+                <li><i class="fas fa-check"></i> Low deposit formation</li>
+                <li><i class="fas fa-check"></i> Enhanced system efficiency</li>
+            </ul>
+            <a href="contact.html" class="inquire-btn">Inquire Now</a>
+        </div>
+
+        <div class="product-card" data-category="hydraulic">
+            <h3 class="product-title">Hydraulic Oils</h3>
+            <p class="product-description">Premium hydraulic oils for heavy-duty machinery.</p>
+            <ul class="product-features">
+                <li><i class="fas fa-check"></i> Superior wear protection</li>
+                <li><i class="fas fa-check"></i> Excellent filterability</li>
+                <li><i class="fas fa-check"></i> Advanced anti-foam properties</li>
+            </ul>
+            <a href="contact.html" class="inquire-btn">Inquire Now</a>
+        </div>
+
+        <div class="product-card" data-category="food-grade">
+            <h3 class="product-title">Specialty Food-Grade Lubricants</h3>
+            <p class="product-description">Safe and efficient lubricants for food processing industries.</p>
+            <ul class="product-features">
+                <li><i class="fas fa-check"></i> FDA compliant</li>
+                <li><i class="fas fa-check"></i> NSF H1 registered</li>
+                <li><i class="fas fa-check"></i> Safe for incidental contact</li>
+            </ul>
+            <a href="contact.html" class="inquire-btn">Inquire Now</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 AL MAGHREB L&G. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+// Category filtering
+const filterButtons = document.querySelectorAll('.filter-btn');
+const productCards = document.querySelectorAll('.product-card');
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        // Add active class to clicked button
+        button.classList.add('active');
+        
+        const category = button.getAttribute('data-category');
+        
+        productCards.forEach(card => {
+            if (category === 'all' || card.getAttribute('data-category') === category) {
+                card.style.display = 'block';
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 100);
+            } else {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    card.style.display = 'none';
+                }, 300);
+            }
+        });
+    });
+});
+
+// Navigation scroll effect
+window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.95)';
+    } else {
+        navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+    }
+});
+    </script>
+</body>
+</html>

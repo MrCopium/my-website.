@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact AL MAGHREB L&G for quality lubricant products and solutions">
+    <title>Contact Us - AL MAGHREB L&G</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: orange;
+            line-height: 1.6;
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid orange;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .brand {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: orange;
+            text-decoration: none;
+            margin-right: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: orange;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .nav-link:hover {
+            background-color: orange;
+            color: black;
+        }
+
+        .contact-header {
+            padding-top: 120px;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .contact-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .contact-info {
+            background-color: rgba(255, 165, 0, 0.1);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 2px solid orange;
+            margin-bottom: 3rem;
+        }
+
+        .contact-info h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .contact-info p {
+            margin-bottom: 2rem;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        .contact-details {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .contact-item {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: rgba(255, 165, 0, 0.05);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(255, 165, 0, 0.1);
+        }
+
+        .contact-item i {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: orange;
+        }
+
+        .contact-item h3 {
+            margin-bottom: 0.5rem;
+            color: orange;
+        }
+
+        .contact-item p {
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .footer {
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 2rem;
+            border-top: 2px solid orange;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .contact-section {
+                padding: 1rem;
+            }
+
+            .contact-details {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="brand">AL MAGHREB L&G</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="contact-header">
+        <h1>Contact Us</h1>
+        <p class="subtitle">We're here to help with your lubrication needs</p>
+    </header>
+
+    <section class="contact-section">
+        <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <p>If you would like to learn more about our products, or if you need assistance with a lubrication solution, feel free to contact us. We are here to help you make the best choice for your business.</p>
+            
+            <div class="contact-details">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <h3>Phone</h3>
+                    <p>+212 661228342</p>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>almaghreblg@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 AL MAGHREB L&G. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.95)';
+            } else {
+                navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+            }
+        });
+    </script>
+</body>
+</html>
